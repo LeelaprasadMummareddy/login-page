@@ -1,0 +1,51 @@
+{% extends 'base2.html'%}
+{% block code %}
+
+<center><h1><u><b>Model Train</b></u></h1></center>
+<h1 style="color: white;">.</h1>
+<h1 style="color: white;">.</h1>
+<h1 style="color: white;">.</h1>
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+</style>
+<form action=""  enctype="multipart/form-data" method="post" style="background-color:#33475b">
+{% csrf_token %}
+<center>
+<div class="card">
+    <center style="background-color:gold"><label for="algo" style="color:white;"> :Select algorihtms:</label>
+        <br>
+
+        <select name="algo" id="algo" >
+            <option value="">choose Module</option>
+          <option value="1">Decesion Tree</option>
+          <option value="2">Random Forest</option>
+          <option value="3">Naive Bias</option>
+
+        </select>
+        <br><br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </center>
+           
+<!--Login--> 
+<div class="container py-5">
+
+  </div>
+</center>
+</div>
+</form>
+<center><h1>{{msg}}</h1></center>
+
+{% endblock %}
+
